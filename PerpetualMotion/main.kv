@@ -1,5 +1,8 @@
 <MainScreen>:
     name: 'main'
+    rampSpeedLabel: rampSpeedLabel
+    staircaseSpeedLabel: staircaseSpeedLabel
+
     FloatLayout:
         size_hint: None, None
 
@@ -79,7 +82,7 @@
             id: rampSpeed
             orientation: 'horizontal'
             min: 10
-            max: 200
+            max: 100
             value: root.rampSpeed
             step: 1
             center_x: root.width * 0.6
@@ -90,9 +93,9 @@
         Slider:
             id: staircaseSpeed
             orientation: 'horizontal'
-            min: 10
-            max: 50
-            value: root.staircaseSpeed
+            min: 0
+            max: 90
+            value: 40
             step: 1
             center_x: root.width * 0.6
             y: root.height * 0.05
